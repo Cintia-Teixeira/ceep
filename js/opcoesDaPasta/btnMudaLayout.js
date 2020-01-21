@@ -17,3 +17,4 @@ function mudaLayout() {
 
 btn.addEventListener('click', mudaTexto);
 btn.addEventListener('click', mudaLayout);
+btn.classList.remove('no-js')
