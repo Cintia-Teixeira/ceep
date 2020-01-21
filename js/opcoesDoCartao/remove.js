@@ -1,22 +1,19 @@
-(function(){
-const btn = document.querySelector(".opcoesDoCartao-remove");
+(function () {
+    const btns = document.querySelectorAll(".opcoesDoCartao-remove");
 
+    for (let i = 0; i < btns.length; i++) {
 
-function remove() {
-    const cartao = btn.closest('.cartao');
-    
-    cartao.classList.add('cartao--some');
+        btns[i].addEventListener('click', function () {
 
-    cartao.addEventListener('transitionend', function(){
-        cartao.remove();
-    });
-}
+            const cartao = btns[i].closest('.cartao');
 
-btn.addEventListener('click', remove); 
-    
+            cartao.classList.add('cartao--some');
 
+            cartao.addEventListener('transitionend', function () {
+                cartao.remove();
+            })
+        })
 
-
-
+    }
 
 })();
