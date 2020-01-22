@@ -12,6 +12,13 @@
         cartao.addEventListener('focusout', function () {
             cartao.classList.remove('cartao--focado')
         })
+
+        cartao.addEventListener('change', function(event) {
+            if (event.target.classList.contains('opcoesDoCartao-radioTipo')) {
+                cartao.style.backgroundColor = event.target.value;
+            }      
+        })
     }
+
 
 })();
