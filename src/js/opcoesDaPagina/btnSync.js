@@ -16,7 +16,7 @@ btnSync.addEventListener('click', function(){
  
     const infosDoMural = {
         usuario: "email@email.com.br"
-        ,cartoes: cartoes
+        ,cartoes: cartoes /*Aqui posso também colocar>>  ,cartoes  <<< sem o valor da propriedade */
     }
 
     xhr.send(JSON.stringify(infosDoMural));

@@ -39,4 +39,17 @@
 
     $(".mural").append($cartao);
   };
+
+  $.ajax({
+    url: "http://ceep.herokuapp.com/cartoes/carregar",
+    method: "GET",
+    data: { usuario: "email@email.com.br" },
+    dataType: "jsonp",
+    success: function success(objeto) {
+      var cartoes = objeto.cartoes;
+      cartoes.forEach(function (cartao) {
+        adicionaCartaoNoMural(cartao);
+      });
+    }
+  });
 })();
