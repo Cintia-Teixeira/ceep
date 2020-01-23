@@ -49,8 +49,7 @@ form.addEventListener('submit', function (event) {
       </article>
         `)
 
-        $(".mural").append($cartao);
-
+        $(".mural").append($cartao); 
 
         $cartao.on('focusin', function () {
             $cartao.addClass('cartao--focado');
@@ -79,6 +78,9 @@ form.addEventListener('submit', function (event) {
             }
         })
     }
+    
+    textarea.value = "";
+    
 })
 
 
